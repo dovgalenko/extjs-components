@@ -1,0 +1,25 @@
+.x-btn-close-btn {
+  display: block;
+  position: absolute;
+  font-size: 0;
+  line-height: 0;
+  background: no-repeat;
+}
+
+/*
+* Image comes from ExtJS framework
+*/
+.x-btn-close-btn {
+  top: 2px;
+  right: 2px;
+  width: 11px;
+  height: 11px;
+  background-image: url(images/tab/tab-default-close.gif);
+  filter: alpha(opacity = 60);
+  opacity: 0.6;
+}
+
+.x-btn-close-btn-over {
+  filter: alpha(opacity = 100);
+  opacity: 1;
+}
