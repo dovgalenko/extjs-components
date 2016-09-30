@@ -20,7 +20,7 @@ Ext.define('Ext.ux.ClosableButton', {
     /**
      * @cfg {String} closeText
      */
-    closeText: 'Закрыть',
+    closeText: 'Close',
 
     /**
      * @type {Array}
@@ -33,8 +33,8 @@ Ext.define('Ext.ux.ClosableButton', {
         var result = this.callParent();
 
         return Ext.apply(result, {
-        	closable: this.closable,
-        	closeText: this.closeText
+          closable: this.closable,
+          closeText: this.closeText
         });
     },
 
@@ -49,22 +49,22 @@ Ext.define('Ext.ux.ClosableButton', {
     // @private
     onClick: function(event, target, eOpts) {
 
-    	if(target.id === this.closeEl.id) {
-    		if(Ext.isFunction(this.closeHandler)) {
-    			Ext.callback(this.closeHandler, this.scope || this);
-    		}
+      if(target.id === this.closeEl.id) {
+        if(Ext.isFunction(this.closeHandler)) {
+          Ext.callback(this.closeHandler, this.scope || this);
+        }
 
-	    	event.preventDefault();
-    	} else {
+        event.preventDefault();
+      } else {
 
-	    	this.callParent(arguments);
-    	}
+        this.callParent(arguments);
+      }
     },
 
     onRender: function() {
 
-        this.callParent(arguments);
-		this.closeEl.addClsOnOver(this.baseCls + '-close-btn-over');
+      this.callParent(arguments);
+      this.closeEl.addClsOnOver(this.baseCls + '-close-btn-over');
     },
 
     // inherit docs
@@ -116,9 +116,9 @@ Ext.define('Ext.ux.ClosableButton', {
      */
     syncClosableUI: function () {
         var classes = [
-	        	this.closableCls,
-	        	this.closableCls + '-' + this.baseCls
-        	];
+            this.closableCls,
+            this.closableCls + '-' + this.baseCls
+          ];
 
         if (this.closable) {
             this.addClsWithUI(classes);
