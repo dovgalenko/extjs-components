@@ -10,7 +10,7 @@ Ext.getScrollbarSize = function() {
   }
 };
 
-Ext.define('Acronis.common.components.plugin.ScrollBar', {
+Ext.define('Ext.ux.plugin.ScrollBar', {
   extend: 'Ext.AbstractPlugin',
   alias: 'plugin.scrollbar',
 
